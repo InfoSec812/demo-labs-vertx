@@ -7,7 +7,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>demo-labs-vertx</name>
   <properties>
-    <vertx.version>3.4.2</vertx.version>
+    <vertx.version>3.5.0</vertx.version>
     <main.verticle>com.redhat.labs.demo.MainVerticle</main.verticle>
     <fabric8-vertx-maven-plugin.projectVersion>1.0.9</fabric8-vertx-maven-plugin.projectVersion>
     <dependency-check-maven.dataDirectory>/tmp/cache/cvedb</dependency-check-maven.dataDirectory>
