@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+.idea/**
+.vertx
+.vertx/**
+**/*.iml
+target
+target/**
+vertx-start-process.id
