@@ -75,9 +75,9 @@ openshift_cluster_content:
     - sonar
 - object: app-builds
   content:
-  - name: demo-labs-spring-build
+  - name: demo-labs-vertx-build
     template: "https://raw.githubusercontent.com/rht-labs/labs-ci-cd/v0.3.0/openshift-templates/s2i-app-build/template-no-secrets.json"
-    params: "{{ inventory_dir }}/params/build/demo-labs-spring"
+    params: "{{ inventory_dir }}/params/build/demo-labs-vertx"
     namespace: labs-ci-cd
 - object: app-deploy
   content:
@@ -86,10 +86,10 @@ openshift_cluster_content:
     params: "{{ inventory_dir }}/params/deploy/demo-labs-vertx-dev"
     namespace: labs-dev
     tags:
-    - demo-labs-spring
+    - demo-labs-vertx
   - name: demo-labs-vertx-demo
     template: "{{ inventory_dir }}/templates/demo-labs-vertx-dev.json"
     params: "{{ inventory_dir }}/params/deploy/demo-labs-vertx-demo"
     namespace: labs-demo
     tags:
-    - demo-labs-spring
+    - demo-labs-vertx
