@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Template
+metadata:
+  creationTimestamp: null
+  name: "true"
+objects:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    name: ${NAME}
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: ${SIZE}
+  status: {}
+parameters:
+- description: The name of the PVC to be created
+  displayName: The name of the Cache PVC
+  name: NAME
+  value: mvn-artifact-cache
+- description: The size of the cache volume to be created
+  displayName: The size of the cache volume to be created
+  name: SIZE
+  value: 2Gi
+
