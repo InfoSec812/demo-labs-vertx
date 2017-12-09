@@ -25,7 +25,7 @@ public class MainVerticle extends AbstractVerticle {
                 .listen(8080, res -> handleServerStart(startFuture, res));
     }
 
-    private void helloHandler(RoutingContext ctx) {
+    void helloHandler(RoutingContext ctx) {
         String message = ctx.request().getParam("name");
         ctx.response()
                 .setStatusCode(OK.code())
@@ -33,7 +33,7 @@ public class MainVerticle extends AbstractVerticle {
                 .end(String.format("Hello %s!!!", message));
     }
 
-    private void handleServerStart(Future<Void> startFuture, AsyncResult<HttpServer> res) {
+    void handleServerStart(Future<Void> startFuture, AsyncResult<HttpServer> res) {
         if (res.succeeded()) {
             startFuture.complete();
         } else {
